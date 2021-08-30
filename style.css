@@ -1,0 +1,26 @@
+html,
+body {
+  height: 100%;
+  font-size: 18px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  margin: 50px auto;
+  max-width: 720px;
+  padding: 20px;
+}
+
+main h1 {
+  margin-bottom: 1em;
+}
+
+main p {
+  margin-bottom: 1.5em;
+  line-height: 1.5;
+}
