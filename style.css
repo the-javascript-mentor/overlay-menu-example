@@ -57,6 +57,10 @@ main p {
   inset: 0;
 }
 
+#modal:not(.open) {
+  pointer-events: none;
+}
+
 #overlay {
   position: absolute;
   width: 100%;
