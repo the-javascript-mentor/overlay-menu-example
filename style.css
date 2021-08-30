@@ -3,16 +3,37 @@ body {
   height: 100%;
   font-size: 18px;
   --animation-step-length: 0.5s;
+  --scrollbar-background-color: #505050;
+  --scrollbar-thumb-color: #b3b3b3;
+  --scrollbar-width: 16px;
 }
 
 body.no-scroll {
   overflow: hidden;
+  padding-right: var(--scrollbar-width);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  width: 16px;
+}
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb-color)
+    var(--scrollbar-background-color);
+}
+body::-webkit-scrollbar-track {
+  background: var(--scrollbar-background-color);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-color);
+  border-radius: 24px;
+  border: 3px solid var(--scrollbar-background-color);
 }
 
 main {
@@ -45,6 +66,10 @@ main p {
   border: 0;
   cursor: pointer;
   z-index: 1;
+}
+
+body.no-scroll #hamburger {
+  margin-right: var(--scrollbar-width);
 }
 
 #hamburger::before {
