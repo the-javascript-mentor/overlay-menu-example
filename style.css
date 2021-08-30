@@ -5,6 +5,10 @@ body {
   --animation-step-length: 0.5s;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 * {
   margin: 0;
   padding: 0;
