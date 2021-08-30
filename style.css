@@ -2,7 +2,7 @@ html,
 body {
   height: 100%;
   font-size: 18px;
-  --animation-step-length: 0.5s;
+  --animation-step-length: 0.2s;
   --scrollbar-background-color: #505050;
   --scrollbar-thumb-color: #b3b3b3;
   --scrollbar-width: 16px;
@@ -10,7 +10,12 @@ body {
 
 body.no-scroll {
   overflow: hidden;
-  padding-right: var(--scrollbar-width);
+}
+
+@media (hover: hover) {
+  body.no-scroll {
+    padding-right: var(--scrollbar-width);
+  }
 }
 
 * {
@@ -68,8 +73,10 @@ main p {
   z-index: 1;
 }
 
-body.no-scroll #hamburger {
-  margin-right: var(--scrollbar-width);
+@media (hover: hover) {
+  body.no-scroll #hamburger {
+    margin-right: var(--scrollbar-width);
+  }
 }
 
 #hamburger::before {
